@@ -1,4 +1,5 @@
 from random import choice
+import file_score as fs
 
 class PPT:
     opciones = ['piedra', 'papel', 'tijera']
@@ -43,5 +44,14 @@ class PPT:
     def jugar_con_tijera(self):
         return self.jugar(PPT.opciones[2])
     
-    def puntaje(self):
+    def puntaje_dic(self):
+        scores={}
+        scores['pc']= self.puntaje_pc
+        scores['user']=self.puntaje_us
+        return scores
+    
+    def finalizar(self):
+        prev_scores = fs.cargar_datos_json()
+        new_scores = self.puntaje_dic()
+        fs.guardar_datos_json(prev_scores, new_scores)
         print(f"User: {self.puntaje_us}\nPC: {self.puntaje_pc}")

@@ -24,6 +24,8 @@ def elijo_tijera():
     resul = juego.jugar_con_tijera()
     print("Resultado",resul)
     str_resultado.set(resul)
+def elijo_finalizar():
+    juego.finalizar()
 
 
 #str_resultado.set("")
@@ -36,8 +38,9 @@ boton_papel = ttk.Button(text="Papel", command=elijo_papel)
 boton_papel.place(x=100, y=160)
 boton_tijera = ttk.Button(text="Tijera", command=elijo_tijera)
 boton_tijera.place(x=180, y=160)
+boton_finalizar = ttk.Button(text="Finalizar", command=elijo_finalizar)
+boton_finalizar.place(x=260, y=160)
 
 
 ventana.mainloop()
 
-juego.puntaje()
