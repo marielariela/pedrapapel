@@ -6,23 +6,23 @@ import tp3_back as back
 juego = back.PPT()
 
 ventana = tk.Tk()
-ventana.title("Juego de piedra-papel-tijera")
+ventana.title("Juego de Piedra-Papel-Tijera")
 ventana.config(width=400, height=300)
-etiqueta_principal = ttk.Label(text="Eligí tu jugada")
+etiqueta_principal = ttk.Label(text="Elegí tu jugada.")
 etiqueta_principal.place(x=20, y=20)
 str_resultado = tk.StringVar()
 
 def elijo_piedra():
     resul = juego.jugar_con_piedra()
-    print("Resultado",resul)
+    print("Resultado:",resul)
     str_resultado.set(resul)
 def elijo_papel():
     resul = juego.jugar_con_papel()
-    print("Resultado",resul)
+    print("Resultado:",resul)
     str_resultado.set(resul)
 def elijo_tijera():
     resul = juego.jugar_con_tijera()
-    print("Resultado",resul)
+    print("Resultado:",resul)
     str_resultado.set(resul)
 def elijo_finalizar():
     juego.finalizar()

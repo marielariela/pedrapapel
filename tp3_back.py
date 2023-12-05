@@ -27,12 +27,12 @@ class PPT:
         jugada_pc = self.pc_juega()
         
         if self.ganador_player(mi_opcion, jugada_pc):
-            return "¡GANASTE! Felicitaciones"
+            return "¡GANASTE! Felicitaciones."
         elif self.empate(mi_opcion, jugada_pc):
             return "¡EMPATAMOS!. Vamos a jugar otra vez."
         else:
             print(f"vos: {mi_opcion} - yo: {jugada_pc}")
-            return "¡PERDISTE!. Yo gané"
+            return "¡PERDISTE! Yo gané."
 
 
     def jugar_con_piedra(self):
